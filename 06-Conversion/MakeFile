@@ -1,0 +1,11 @@
+main: tablaDeConversiones.o prints.o conversion.o
+    gcc -o main tablaDeConversiones.o prints.o conversion.o
+
+tablaDeConversiones.o: tablaDeConversiones.c prints.h
+    gcc -c tablaDeConversiones.c
+
+prints.o: prints.h prints.c
+    gcc -c prints.c
+
+conersion.o: conversion.h conversion.c
+    gcc -c conversion.c
